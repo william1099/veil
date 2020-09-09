@@ -1,0 +1,74 @@
+page-login {
+	
+	
+	/*
+	.scroll-content {
+        background-image: url("../../img/orange.jpg");
+        display: flex;
+        flex-direction: column;
+      }
+	*/
+      ion-row {
+        align-items: center;
+        text-align: center;
+      }
+
+      ion-item {
+          border-radius: 30px !important;
+          padding-left: 10px !important;
+          background-color: #f6f6f6;
+          opacity: 0.7;
+          font-size: 2em;
+      }
+
+      ion-list {
+          margin: 0;
+      }
+
+      
+      .judul {
+      	color:white;
+        font-weight:bold;
+        font-size:40px;
+        text-align:center;
+      }
+
+      .login-form {
+          flex: 0.4;
+      }
+
+      
+
+      .login-button {
+          width: 100%;
+          border-radius: 30px;
+          font-size: 16px;
+          background-color:#F7CA18 !important;
+      }
+      .login-button2 {
+      	width: 100%;
+          border-radius: 30px;
+          font-size: 16px;
+      	background-color:#3b5998 !important;
+      }
+
+  	.judul2 {
+  		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		height: 100%;
+  	}
+	
+	.err {
+		color:map-get($colors, "danger");
+		font-weight:bold;
+		display:block;
+	}
+
+	
+     .page {
+     	background-color:#EF4836;
+     } 
+
+
+}

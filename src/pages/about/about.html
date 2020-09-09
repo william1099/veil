@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="primaryy">
+    <ion-title>
+      Deskripsi Barang Anda
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	
+	<ion-row class="item-form">
+	    <ion-col>
+	      <ion-list inset>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="clipboard"></ion-icon></ion-label>
+	          <ion-input placeholder="Nama Barang" type="text" [(ngModel)]="item.name"></ion-input>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="information-circle"></ion-icon></ion-label>
+	          <ion-input  placeholder="Status Barang" type="text" [(ngModel)]="item.status"></ion-input>
+	        </ion-item>
+			
+			<ion-item>
+	          <ion-label><ion-icon name="cash"></ion-icon></ion-label>
+	          <ion-input  placeholder="Harga" type="text" [(ngModel)]="item.price"></ion-input>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="megaphone"></ion-icon></ion-label>
+	          <ion-input  placeholder="Minimal Bid" type="text" [(ngModel)]="item.bid"></ion-input>
+	        </ion-item>
+			
+			<ion-item>
+	          <ion-label><ion-icon name="eye"></ion-icon></ion-label>
+	          <ion-input  placeholder="Deskripsi Barang" type="text" [(ngModel)]="item.desc"></ion-input>
+	        </ion-item>
+
+	        <ion-item>
+  				<ion-label><ion-icon name="stopwatch"></ion-icon> Durasi Lelang</ion-label>
+  					<ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="item.duration"></ion-datetime>
+			</ion-item>
+			</ion-list>
+			
+			<button ion-button style="background-color:#F9690E !important" full (click)="action()">Upload Picture</button>
+	      <button ion-button class="login-button" color="primaryy" full (click)="save(user)">Save Settings</button>
+	      <b>Your Picture :</b> 
+			<img [src]="picUrl" style="width:100px; height:100px" *ngIf="picUrl != ''"/>	
+	    </ion-col>
+	    
+	  </ion-row>
+
+</ion-content>

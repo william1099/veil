@@ -1,0 +1,64 @@
+page-chat {
+	/*
+	.chatbox {
+		display:inline-block;
+		background-color:map-get($colors, "primaryy");
+		padding:5px 10px;
+		margin:5px;
+		border-radius:8px;
+		color:white;
+		width:80px;
+	}
+	.username {
+		font-weight:bold;
+		font-size:90%;
+	}
+	.message {
+		font-size:120%;
+	}
+	.messageLeft {
+		float:left;
+	}
+	.messageRight {
+		float:right;
+		background-color:map-get($colors, "light");
+		.username {
+			float:right;
+		}
+	}
+	*/
+	.chatbox2:after {
+		content:"";
+		clear:both;
+		display:block;
+	}
+
+	ion-label {
+		display:inline-block;
+		height:auto;
+		overflow:visible;
+		white-space:normal;
+		padding:8px;
+		font-size:15px;
+		color:#060606 !important;
+	}
+
+	ion-chip {
+		height:auto !important;
+		margin-bottom:10px !important;
+		line-height: 22px !important;
+
+	}
+	.right {
+		float:right;
+		background-color:map-get($colors, "primaryy");
+	}
+	.judulRight {
+		text-align:right;
+		color:#ffffff;
+	}
+	.textRight {
+		color:#ffffff !important;
+	}
+
+}

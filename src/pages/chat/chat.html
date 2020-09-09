@@ -1,0 +1,74 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primaryy">
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<!--
+	<div class="chat">
+		<div class="chatbox2" *ngFor="let message of messages">
+			<div [class]="User == message.user ? 'chatbox messageLeft' : 'chatbox messageRight'">
+				<div><div class="username">{{ message.username }}</div></div>
+				<div class="message">{{ message.message }}</div>
+			</div>
+		</div>
+	</div>
+	-->
+
+	<div class="chatbox2"  *ngFor="let message of messages">
+		<ion-chip [class.right]="User != message.user">
+
+		  <ion-avatar *ngIf="User == message.user">
+	    	<img src="{{ message.pic }}">
+		  </ion-avatar>
+
+		  <ion-label [class.textRight]="User != message.user"><h4 style="margin:0;" [class.judulRight]="User != message.user">{{ message.user }}</h4>{{ message.message }}</ion-label>
+
+		  <ion-avatar *ngIf="User != message.user">
+		    <img src="{{ message.pic }}">
+		  </ion-avatar>
+
+		</ion-chip>
+	</div>
+
+<!--
+<div class="chatbox2">
+<ion-chip [class.right]="true">
+	
+  <ion-label color="secondary"><p style="margin:0;">asdsd</p>Secondary Label </ion-label>
+  <ion-avatar text-right>
+    <img src="https://cbsnews2.cbsistatic.com/hub/i/r/2016/10/11/4a8c782f-b02e-486c-a3a9-f15049617512/thumbnail/620x350/c8c9686798e52f059876c8b897cacc6c/istock-67470795-large.jpg">
+  </ion-avatar>
+</ion-chip>
+</div>
+<div>
+<ion-chip [class.right]="false" class="chatbox2">
+  <ion-label color="secondary">thirdLabel </ion-label>
+</ion-chip>
+</div>
+-->
+
+</ion-content>
+
+<ion-footer style="background-color:#9B2114 !important">
+	<ion-grid >
+		<ion-row align-items-center>
+			<ion-col col-10>
+    			<ion-textarea [(ngModel)]="pesan" style="background-color:#f4f4f4 !important; border-radius:8px;" placeholder="Write message here"></ion-textarea>
+    		</ion-col>
+    		<ion-col col-2 >
+				<button icon-only ion-button color="primaryy" (click)="kirim()"><ion-icon name="send"></ion-icon></button>
+    		</ion-col>
+    	</ion-row>
+  	</ion-grid>
+</ion-footer>

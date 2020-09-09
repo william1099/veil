@@ -1,0 +1,29 @@
+
+
+<ion-menu [content]="content">
+	<ion-content scrollbar-y-auto class="ct">
+	
+		<ion-item style="background-color:#F85032">
+    <div text-center>
+         
+          	<img  width="150" height="150" class="menupic" [src]=userdata.img/>
+      	<div text-center style="color:white; font-weight:bold; font-size:20px">
+			{{ userdata.name }}
+      	</div>
+    </div>
+  </ion-item>
+		<ion-list >
+			<button menuClose ion-item class="ct" *ngFor="let page of pages" (click)="openPage(page)">
+			{{ page.title }}
+			</button>	
+			
+		</ion-list>
+
+		<ion-footer style="background-color:#F85032 !important">
+			<ion-toolbar transparent>
+			</ion-toolbar>
+		</ion-footer>
+	</ion-content>
+</ion-menu>
+
+<ion-nav  [root]="rootPage" #content swipeBackEnabled="false" #Nav></ion-nav>

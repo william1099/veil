@@ -1,0 +1,47 @@
+
+<ion-header>
+
+<ion-navbar color="danger">
+
+</ion-navbar>  
+    <br/><br/><br/>
+    <br/>
+  
+
+</ion-header>
+
+
+<ion-content padding scrollbar-y-auto class="page">
+
+  <ion-row>
+    <ion-col class="judul">Sign In</ion-col>
+  </ion-row>
+
+  <ion-row class="login-form" scrollbar-y-auto>
+    <ion-col>
+      <ion-list inset>
+
+        <ion-item>
+          <ion-label><ion-icon name="person"></ion-icon></ion-label>
+          <ion-input placeholder="email address" type="text" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+		<ion-row>
+			<ion-col></ion-col>
+		</ion-row>
+        <ion-item>
+          <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+          <ion-input  placeholder="password" type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <button ion-button class="login-button"  full (click)="login(user)">Sign In</button>
+      <ion-row>
+      	<ion-col style="color:white; font-size:20px;">OR</ion-col>
+      </ion-row>
+      <button ion-button class="login-button2"  full (click)="loginFb(user)">Sign In With Facebook</button>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>

@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-navbar color="primaryy">
+    <ion-title>Your Profile</ion-title>
+
+      <ion-buttons start>
+        <button ion-button color="danger" icon-only (click)="forum()"><ion-icon  color="light" name="send"></ion-icon></button>
+      </ion-buttons>
+
+
+      
+      <ion-buttons end>
+        <button ion-button color="danger" menuToggle icon-only><ion-icon  color="light" name="menu"></ion-icon></button>
+        
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#f4f4f4 !important ">
+  
+  <ion-card >
+  
+  <ion-item>
+    <div text-center class="pic">
+      <ion-avatar width="200" height="200">    
+          <ion-img  width="200" height="200" [src]=data.img></ion-img>
+      </ion-avatar>
+    </div>
+  </ion-item>
+  
+
+  <ion-card-content>
+    <ion-card-title>
+      <div text-center>{{ data.name }}</div>
+    </ion-card-title>
+    <p>Salah satu pelelang di veil dan telah berhasil melelang beberapa barangnya.</p>
+
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+            <ion-col col-4>
+                <button ion-button color="lightt" class="button1" (click)="Flag1()"><ion-icon name="contact" ></ion-icon>    Profile</button>
+            </ion-col>
+            <ion-col col-4>
+                <button ion-button color="lightt" class="button1" (click)="Flag2()"><ion-icon name="body"></ion-icon>    Friends</button>
+            </ion-col>
+            <ion-col col-4>
+              <button ion-button color="lightt" class="button1" (click)="Flag3()"><ion-icon name="mail" ></ion-icon>    Inbox</button>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-card-content>
+
+</ion-card>
+<ion-card *ngIf="flag1">
+  <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="mail" ></ion-icon>  Email : {{ data.email }}</h2>  
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="person"></ion-icon>  username : {{ data.name }}</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="compass"></ion-icon>  Address : {{ data.address }}</h2>  
+          </ion-col>
+        </ion-row>
+          <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="globe"></ion-icon>  Country : {{ data.country }}</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="call"></ion-icon>  Phone Number : {{ data.phone }}</h2>  
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="body"></ion-icon>  Gender : {{ data.gender }}</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <h2><ion-icon name="cash"></ion-icon>  Virtual Coin : {{ data.vc }}</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item>
+</ion-card>
+
+<ion-card *ngIf="flag2">
+    <ion-card-title>Friends</ion-card-title>
+    <ion-card-content>
+        You dont have any friends
+    </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="flag3">
+    <ion-card-title>Messages</ion-card-title>
+    <ion-card-content>
+        You dont have any messages
+    </ion-card-content>
+</ion-card>
+
+</ion-content>

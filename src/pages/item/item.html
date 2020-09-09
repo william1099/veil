@@ -1,0 +1,162 @@
+<!--
+  Generated template for the ItemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primaryy">
+    <ion-title>Detail Barang</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+	
+	<ion-grid>
+		<ion-row >
+			<ion-col>
+				<h2>{{ item.name }} </h2>
+			</ion-col>
+			<ion-col col-auto>
+				{{ item.time }} hari lagi
+			</ion-col>
+		</ion-row>
+
+		<ion-row  justify-content-center>
+			<ion-col col-12>
+				<img [src]=item.img />
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col col-5>
+				<h5>Rp. {{ item.price }}</h5>
+			</ion-col>
+			<ion-col col-7>
+				<h5>
+				<ion-avatar>
+					By {{ item.userName }}  
+				</ion-avatar>
+				</h5>
+			</ion-col>
+		</ion-row>
+		</ion-grid>
+
+		<ion-grid class="te">
+		<ion-row>
+			<ion-col>
+				<h3><ion-icon name="eye" style="margin-right:9px"></ion-icon> Deskripsi Barang : </h3>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4>
+				<h5>Penjual : </h5>
+			</ion-col>
+			<ion-col col-8>
+				<h5  float-right>{{ item.userName }} </h5>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row>
+			<ion-col col-4>
+				<h5>No Telp : </h5>
+			</ion-col>
+			<ion-col col-8>
+				<h5  float-right>{{ item.phone }} </h5>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col col-4>
+				<h5>Alamat : </h5>
+			</ion-col>
+			<ion-col col-8 >
+				<h5  float-right>{{ item.address }} </h5>
+			</ion-col>
+		</ion-row>	
+
+		<ion-row>
+			<ion-col col-4>
+				<h5>Min Bid : </h5>
+			</ion-col>
+			<ion-col col-8 >
+				<h5  float-right>Rp. {{ item.price }}</h5>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row>
+			<ion-col col-4>
+				<h5>Sejak : </h5>
+			</ion-col>
+			<ion-col col-8>
+				<h5  float-right>{{ item.duration }}</h5>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col col-4>
+				<h5>Berakhir : </h5>
+			</ion-col>
+			<ion-col col-8>
+				<h5  float-right>{{ item.time }} hari lagi</h5>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col col-5>
+				<h5>Status Lelang : </h5>
+			</ion-col>
+			<ion-col col-7>
+				<h5  float-right>{{ item.status }}</h5>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col col-5>
+				<h5>Latest Bid</h5>
+			</ion-col>
+			<ion-col col-7>
+				<h5  float-right>{{ item.latestbid }}</h5>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col col-5>
+				<h5></h5>
+			</ion-col>
+			<ion-col col-7>
+				<h5  float-right></h5>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-5>
+				<h5></h5>
+			</ion-col>
+			<ion-col col-7>
+				<h5  float-right></h5>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-5>
+				<h5></h5>
+			</ion-col>
+			<ion-col col-7>
+				<h5  float-right></h5>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	
+	<ion-fab right bottom>
+		<button icon-only ion-fab color="primaryy" (click)="chatApp()"><ion-icon name="chatbubbles"></ion-icon></button>
+	</ion-fab>
+
+</ion-content>
+
+<ion-footer>
+		<ion-toolbar>
+			<button full ion-button color="primaryy" [class.cant]="!can" (click)="showConfirm()" *ngIf="item.userName != current">Bid Now</button>
+		</ion-toolbar>
+	</ion-footer>

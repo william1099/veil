@@ -1,0 +1,62 @@
+<!--
+  Generated template for the AuctionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primaryy">
+    <ion-title>Auction</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	
+
+	<ion-card *ngFor="let brg of itemList">
+
+	  <ion-item>
+	    <ion-avatar item-start>
+	      <img src="{{ List[brg].userPic }}" />
+	    </ion-avatar>
+	    <h2>{{ List[brg].userName }}</h2>
+	    <p>{{ List[brg].userTimeStart }}</p>
+	  </ion-item>
+
+	  <img src="{{ List[brg].img }}" />
+
+	  <ion-card-content>
+	  	<button ion-button clear color="primaryy" (click)="viewItem(List[brg])"><h2 style="color:#C0392B"><b>{{ List[brg].name }}</b></h2></button>
+	    <p>{{ List[brg].desc }}</p>
+	  </ion-card-content>
+
+	  <ion-row>
+	  	<ion-col>
+	      <button ion-button icon-left clear small color="primaryy" (click)="viewItem(List[brg])">
+	        <div>Rp. {{ List[brg].price }}</div>
+	      </button>
+	    </ion-col>
+	    <ion-col>
+	      <button ion-button icon-left clear small color="primaryy" >
+	        <ion-icon name="text"></ion-icon>
+	        <div>Comments</div>
+	      </button>
+	    </ion-col>
+	    <ion-col center text-center>
+	      <ion-note color="primaryy">
+	        {{ List[brg].time }} hari lagi
+	      </ion-note>
+	    </ion-col>
+	  </ion-row>
+
+	</ion-card>
+
+
+
+	<ion-fab right bottom>
+		<button ion-fab (click)="addItem()" color="primaryy" icon-only><ion-icon name="add"></ion-icon></button>
+	</ion-fab>
+</ion-content>

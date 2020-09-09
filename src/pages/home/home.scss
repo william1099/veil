@@ -1,0 +1,27 @@
+page-home {
+	
+	.pic {
+		background-color:map-get($colors, "dangerr");
+	}
+
+	ion-avatar img  {
+		width:100% !important;
+		height : 100% !important;
+		border:5px solid #ffffff;
+	}
+
+	.button1 {
+		webkit-box-shadow: 0 0 0 0 ;
+     	box-shadow: 0 0 0 0 ;
+	}
+	
+	ion-toolbar, ion-grid {
+		background-color:#ffffff !important;
+	}
+
+	ion-icon {
+		margin:5px;
+	}
+
+	
+}

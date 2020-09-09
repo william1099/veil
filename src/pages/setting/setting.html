@@ -1,0 +1,60 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Setting</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding scrollbar-y-auto>
+	
+	 <ion-row class="login-form">
+	    <ion-col>
+	      <ion-list inset>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="person"></ion-icon></ion-label>
+	          <ion-input placeholder="name" type="text" [(ngModel)]="user.name"></ion-input>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="compass"></ion-icon></ion-label>
+	          <ion-input  placeholder="address" type="text" [(ngModel)]="user.address"></ion-input>
+	        </ion-item>
+			
+			<ion-item>
+	          <ion-label><ion-icon name="body"></ion-icon></ion-label>
+	          <ion-input  placeholder="gender" type="text" [(ngModel)]="user.gender"></ion-input>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="globe"></ion-icon></ion-label>
+	          <ion-input  placeholder="country" type="text" [(ngModel)]="user.country"></ion-input>
+	        </ion-item>
+			
+			<ion-item>
+	          <ion-label><ion-icon name="call"></ion-icon></ion-label>
+	          <ion-input  placeholder="phone number" type="text" [(ngModel)]="user.phone"></ion-input>
+	        </ion-item>
+	      </ion-list>
+			
+			<button ion-button style="background-color:#F7CA18 !important" full (click)="action()">Upload Picture</button>
+	      <button ion-button class="login-button" color="danger" full (click)="save(user)">Save Settings</button>
+	      <b>Your Picture :</b> 
+			<img [src]="picUrl" style="width:100px; height:100px" *ngIf="picUrl != ''"/>	
+	    </ion-col>
+	    
+	  </ion-row>
+
+</ion-content>
+
+<ion-footer>
+	<ion-item color="danger"></ion-item>
+</ion-footer>
